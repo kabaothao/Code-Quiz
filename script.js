@@ -23,6 +23,9 @@ setTime();
 //navigate from one html file to another html file
 function navigateFromTo(from, to) {
   let theURL = window.location.pathname;
+  if (theURL.split("Code-Quiz/")[1] == "") {
+    theURl += "index.html";
+  }
   window.location.href = theURL.replace(from, to);
 }
 
