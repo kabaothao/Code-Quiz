@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Questionnaire</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a onclick="navigateFromTo('questionnaire', 'index')">Home</a>
+        <a>Quiz</a>
+        <a onclick="navigateFromTo('questionnaire', 'highscore')"
+          >High Scores</a
+        >
+      </div>
+    </nav>
+    <section id="questionnaire">
+      <h3 class="time"></h3>
+      <p class="question"></p>
+      <button class="a" onclick="getNextQuestion('Option1')"></button>
+      <br />
+      <button class="b" onclick="getNextQuestion('Option2')"></button>
+      <br />
+      <button class="c" onclick="getNextQuestion('Option3')"></button>
+      <br />
+      <button class="d" onclick="getNextQuestion('Option4')"></button>
+      <p class="result"></p>
+    </section>
+  </body>
+
+  <script src="./script.js"></script>
+</html>

@@ -1,0 +1,36 @@
+section {
+  text-align: center;
+  margin: 50px 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #8224e3;
+  color: white;
+  border-radius: 4px;
+  border-color: #8224e3;
+  margin-top: 15px;
+}
+
+p {
+  margin: 15px;
+}
+
+#questionnaire button {
+  width: 280px;
+}
+
+nav {
+  box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
+  background-color: #8224e3;
+  color: white;
+  padding: 15px;
+}
+
+body {
+  margin: 0px;
+}
+
+nav div a {
+  margin-right: 10px;
+}

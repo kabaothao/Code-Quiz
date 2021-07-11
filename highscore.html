@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Highscores</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a onclick="navigateFromTo('highscore', 'index')">Home</a>
+        <a onclick="navigateFromTo('highscore', 'questionnaire')">Quiz</a>
+        <a>High Scores</a>
+      </div>
+    </nav>
+    <section>
+      <h3>View High Scores</h3>
+      <hr />
+      <p id="userScores"></p>
+      <button onclick="navigateFromTo('highscore', 'index')">Go Back</button>
+      <button onclick="clearHighScores()">Clear High Scores</button>
+    </section>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
