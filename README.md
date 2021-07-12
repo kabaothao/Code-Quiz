@@ -40,7 +40,7 @@ List the ready features here:
 
 ## Screenshots
 
-![Example screenshot](.\Assets\codequizimage.PNG)
+![Example screenshot](https://github.com/kabaothao/Code-Quiz/blob/main/Assets/codequizimage.PNG)
 
 <!-- If you have screenshots you'd like to share, include them here. -->
 
