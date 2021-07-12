@@ -25,7 +25,6 @@ function navigateFromTo(from, to) {
   let theURL = window.location.pathname;
   if (theURL.split("Code-Quiz/")[1] == "") {
     theURL += "index.html";
-    console.log(theURL);
   }
   window.location.href = theURL.replace(from, to);
 }
