@@ -1,3 +1,10 @@
+let correctSound = new Audio("./Assets/correctsound.mp3");
+correctSound.load();
+let wrongSound = new Audio("./Assets/wrongsound.mp3");
+wrongSound.load();
+let clickSound = new Audio("./Assets/clicksound.wav");
+clickSound.load();
+
 let timeEl = document.querySelector(".time");
 
 var secondsLeft = 60;
@@ -61,8 +68,8 @@ const questionnaire = [
   {
     Question: "What is lutefisk?",
     Option1: "Cod soaked in lye then boiled",
-    Option2: "Bratwurst soaked in beer then grilled",
-    Option3: "Grilled walleye from Lake Calhoun",
+    Option2: "Bratwurst soaked in beer",
+    Option3: "Grilled walleye",
     Option4: "Minnesota steak tartare",
     Answer: "Cod soaked in lye then boiled",
   },
@@ -123,17 +130,20 @@ let reset = function () {
   if (userScoresEl) {
     //R
     let highscorers = JSON.parse(localStorage.getItem("users"));
-    let listToShowOnTheFrontEnd = "";
+    let listToShowOnTheFrontEnd =
+      "<table><tr><th>Name</th><th>Points</th></tr>";
     for (let i = 0; i < highscorers.length; i++) {
       //get player
       //get pts
       //repace seconds with pts
       listToShowOnTheFrontEnd +=
+        "<tr><td>" +
         highscorers[i].player +
-        " " +
-        highscorers[i].score.replace("seconds", "points") +
-        "<br>";
+        "</td><td>" +
+        highscorers[i].score.replace("seconds", "") +
+        "</td></tr>";
     }
+    listToShowOnTheFrontEnd += "</table>";
     userScoresEl.innerHTML = listToShowOnTheFrontEnd;
     console.log(highscorers);
   }
@@ -142,6 +152,9 @@ let reset = function () {
 reset();
 
 let getNextQuestion = function (option) {
+  playClickSound();
+  $("#result").fadeIn("fast");
+
   // when questionnaire length is 7 = 7 don't get the next question
   if (questionIndex == questionnaire.length - 1) {
     let userName = prompt("Please enter you name.");
@@ -172,11 +185,21 @@ let getNextQuestion = function (option) {
   if (
     questionnaire[questionIndex].Answer == questionnaire[questionIndex][option]
   ) {
+    document.getElementById("result").style.color = "green";
+    correctSound.currentTime = 0;
+    correctSound.play();
     resultEl.textContent = "Correct!";
   } else {
+    document.getElementById("result").style.color = "red";
+    wrongSound.currentTime = 0;
+    wrongSound.play();
     resultEl.textContent = "Wrong!";
     secondsLeft -= 5;
   }
+
+  setTimeout(function () {
+    $("#result").fadeOut("slow");
+  }, 500);
 
   questionIndex++;
   questionEl.textContent = questionnaire[questionIndex].Question;
@@ -190,4 +213,9 @@ let getNextQuestion = function (option) {
 clearHighScores = function () {
   localStorage.clear();
   userScoresEl.innerHTML = "";
+};
+
+let playClickSound = function () {
+  clickSound.currentTime = 0;
+  clickSound.play();
 };

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Questionnaire</title>
   </head>
   <body>
@@ -20,14 +22,26 @@
     <section id="questionnaire">
       <h3 class="time"></h3>
       <p class="question"></p>
-      <button class="a" onclick="getNextQuestion('Option1')"></button>
+      <button
+        class="a w3-container w3-center w3-animate-left"
+        onclick=" getNextQuestion('Option1')"
+      ></button>
       <br />
-      <button class="b" onclick="getNextQuestion('Option2')"></button>
+      <button
+        class="b w3-container w3-center w3-animate-right"
+        onclick=" getNextQuestion('Option2')"
+      ></button>
       <br />
-      <button class="c" onclick="getNextQuestion('Option3')"></button>
+      <button
+        class="c w3-container w3-center w3-animate-left"
+        onclick="getNextQuestion('Option3')"
+      ></button>
       <br />
-      <button class="d" onclick="getNextQuestion('Option4')"></button>
-      <p class="result"></p>
+      <button
+        class="d w3-container w3-center w3-animate-right"
+        onclick="getNextQuestion('Option4')"
+      ></button>
+      <p id="result" class="result w3-container w3-center w3-animate-left"></p>
     </section>
   </body>
 

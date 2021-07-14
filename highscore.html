@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Highscores</title>
   </head>
@@ -15,10 +16,9 @@
         <a>High Scores</a>
       </div>
     </nav>
-    <section>
-      <h3>View High Scores</h3>
-      <hr />
-      <p id="userScores"></p>
+    <section class="w3-container w3-center w3-animate-left">
+      <h3>High Scores</h3>
+      <div id="userScores"></div>
       <button onclick="navigateFromTo('highscore', 'index')">Go Back</button>
       <button onclick="clearHighScores()">Clear High Scores</button>
     </section>

@@ -1,21 +1,21 @@
 section {
   text-align: center;
-  margin: 50px 10px;
+  margin: 15px 10px;
 }
 
 button {
-  padding: 10px;
-  background-color: #8224e3;
+  padding: 10px !important;
+  background-color: maroon;
   color: white;
   border-radius: 4px;
-  border-color: #8224e3;
+  border-color: gold;
   margin-top: 15px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: white;
-  color: #8224e3;
+  background-color: gold;
+  color: maroon;
 }
 
 button:active {
@@ -32,20 +32,89 @@ p {
 
 nav {
   box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
-  background-color: #8224e3;
+  /* background-color: #8224e3; */
+  background-image: url(./Assets/taylorfalls.png);
+  background-position: center;
+  background-size: cover;
   color: white;
-  padding: 15px;
+  height: 80px;
 }
 
 body {
   margin: 0px;
 }
 
-nav div a {
-  margin-right: 10px;
+nav div a:nth-child(1) {
+  position: absolute;
+  margin: 30px;
+}
+
+nav div a:nth-child(2) {
+  position: absolute;
+  margin: 30px 0px 30px 90px;
+}
+
+nav div a:nth-child(3) {
+  margin: 30px 0px 30px 140px;
+  position: absolute;
+}
+
+nav div {
+  background-color: #00000085;
+  height: 80px;
+  width: 100%;
 }
 
 nav div a:hover {
   text-decoration-line: underline;
   cursor: pointer;
+}
+
+.time {
+  height: 36px;
+}
+.w3-container,
+.w3-panel {
+  padding: 0;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.question {
+  height: 36px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+section div img {
+  max-width: 50px;
+}
+
+#result {
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+table,
+th,
+td {
+  background-color: maroon;
+  font-size: 18px;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+table {
+  min-width: 300px;
+  margin: auto;
 }
